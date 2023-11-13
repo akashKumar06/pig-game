@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pig Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div>
-        <section>
-            <h2>PLAYER 1</h2>
-            <h1 class="total-score player1"></h1>
-            <div class="score">
-                <h2>CURRENT</h2>
-                <h3 class="current-score"></h3>
-            </div>
-        </section>
-        <section>
-            <h2>PLAYER 1</h2>
-            <h1 class="total-score player1"></h1>
-            <div class="score">
-                <h2>CURRENT</h2>
-                <h3 class="current-score"></h3>
-            </div>
-        </section>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="btn new-game">🔁 NEW GAME</div>
+    <div class="btn dice">dice</div>
+    <div class="btn roll">🎲 ROLL</div>
+    <div class="btn hold">🔼 HOLD</div>
+    <div class="rule">▶</div>
+    <div class="overlay "></div>
+    <div class="rule-book">
+      <h1>Pig Game</h1>
+      <div>
+        <strong>
+          Each turn, a player repeatedly rolls a die until either a 1 is rolled
+          or the player decides to "hold"
+        </strong>
+        <ul>
+          <li>
+            If the player rolls a 1, they score nothing and it becomes the next
+            player's turn.
+          </li>
+          <li>
+            If the player rolls any other number, it is added to their turn
+            total and the player's turn continues.
+          </li>
+          <li>
+            If a player chooses to "hold", their turn total is added to their
+            score, and it becomes the next player's turn.
+          </li>
+        </ul>
+        <p>
+          <em><strong>The first player to score 100 or more points wins.</strong></em><br> For example, the
+          first player, Donald, begins a turn with a roll of 5. Donald could
+          hold and score 5 points, but chooses to roll again. Donald rolls a 2,
+          and could hold with a turn total of 7 points, but chooses to roll
+          again. Donald rolls a 1, and must end his turn without scoring. The
+          next player, Alexis, rolls the sequence 4-5-3-5-6, after which she
+          chooses to hold, and adds her turn total of 23 points to her score.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <section class="active">
+        <h2>PLAYER 1</h2>
+        <h1 class="total-score">12</h1>
+        <div class="score">
+          <h2>CURRENT</h2>
+          <h3 class="current-score">32</h3>
+        </div>
+      </section>
+      <section class="hidden">
+        <h2>PLAYER 1</h2>
+        <h1 class="total-score">11</h1>
+        <div class="score">
+          <h2>CURRENT</h2>
+          <h3 class="current-score">23</h3>
+        </div>
+      </section>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
