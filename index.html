@@ -3,17 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pig Game</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
   </head>
   <body>
-    <div class="btn new-game">🔁 NEW GAME</div>
-    <div class="btn dice">dice</div>
-    <div class="btn roll">🎲 ROLL</div>
-    <div class="btn hold">🔼 HOLD</div>
-    <div class="rule">▶</div>
-    <div class="overlay "></div>
-    <div class="rule-book">
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <!-- <div class="rule">▶</div>
+    <div class="overlay hidden"></div>
+    <div class="rule-book hidden">
       <h1>Pig Game</h1>
       <div>
         <strong>
@@ -35,34 +53,21 @@
           </li>
         </ul>
         <p>
-          <em><strong>The first player to score 100 or more points wins.</strong></em><br> For example, the
-          first player, Donald, begins a turn with a roll of 5. Donald could
-          hold and score 5 points, but chooses to roll again. Donald rolls a 2,
-          and could hold with a turn total of 7 points, but chooses to roll
-          again. Donald rolls a 1, and must end his turn without scoring. The
-          next player, Alexis, rolls the sequence 4-5-3-5-6, after which she
-          chooses to hold, and adds her turn total of 23 points to her score.
+          <em
+            ><strong
+              >The first player to score 100 or more points wins.</strong
+            ></em
+          ><br />
+          For example, the first player, Donald, begins a turn with a roll of 5.
+          Donald could hold and score 5 points, but chooses to roll again.
+          Donald rolls a 2, and could hold with a turn total of 7 points, but
+          chooses to roll again. Donald rolls a 1, and must end his turn without
+          scoring. The next player, Alexis, rolls the sequence 4-5-3-5-6, after
+          which she chooses to hold, and adds her turn total of 23 points to her
+          score.
         </p>
       </div>
-    </div>
-    <div class="container">
-      <section class="active">
-        <h2>PLAYER 1</h2>
-        <h1 class="total-score">12</h1>
-        <div class="score">
-          <h2>CURRENT</h2>
-          <h3 class="current-score">32</h3>
-        </div>
-      </section>
-      <section class="hidden">
-        <h2>PLAYER 1</h2>
-        <h1 class="total-score">11</h1>
-        <div class="score">
-          <h2>CURRENT</h2>
-          <h3 class="current-score">23</h3>
-        </div>
-      </section>
-    </div>
+    </div> -->
     <script src="script.js"></script>
   </body>
 </html>
