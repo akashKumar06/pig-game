@@ -12,7 +12,8 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
-
+const ruleEl = document.querySelector('.rule');
+const overlayEl = document.querySelector('.overlay');
 let scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
@@ -34,6 +35,7 @@ const init = function () {
   player1El.classList.remove("player--winner");
   player0El.classList.add("player--active");
   player1El.classList.remove("player--active");
+  ruleEl.style.top = "20%";
 };
 
 init();
@@ -45,6 +47,13 @@ const switchPlayer = function () {
   player0El.classList.toggle("player--active");
   player1El.classList.toggle("player--active");
 };
+
+document.addEventListener('keydown', function(e){
+  if(e.key == "Escape"){
+    overlayEl.style.display = "none";
+    ruleEl.style.top = "-100%";
+  }
+})
 
 // Rolling dice functionality
 btnRoll.addEventListener("click", function () {
